@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+        body {
+            background: #CCCCCC;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .quiz-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            max-width: 90%;
+            width: auto;
+            height: auto;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            margin: 20px 0;
+            width: 100%;
+        }
+
+        .option {
+            padding: 1em;
+            font-size: 1.5em;
+            border-radius: 0.25em;
+            background: #FFA453;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-sizing: border-box;
+        }
+
+        .option:hover {
+            background-color: #62CED2;
+        }
+        .again,
+        .next-button {
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: black;
+            background-color: #EB4559;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        .again:hover,
+        .next-button:hover {
+            background-color: #62CED2;
+        }
+
+        .timer
+        {
+            margin: 2em;
+            font-size: 1em;
+        }
+        .score {
+            margin: 2em;
+            font-size: 1em;
+        }
+
+        #start-btn {
+            margin: 30px 15px 15px;
+            padding: 20px 60px;
+            font-size: 2em;
+            font-weight: bold;
+            color: #020000;
+            background-color: #FFC96F;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #start-btn:hover {
+            background-color: #62CED2;
+        }
+
+
+
+        .question {
+            font-weight: bold;
+            font-size: 1.67em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feedback {
+            margin-bottom: 20px;
+            font-size: 1.25em;
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="quiz-container">
+    <div class="timer" id="timer">Time for each Question: 10 sec</div>
+    <button id="start-btn">Start Quiz</button>
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <div id="score">Score: <span id="score-value">0</span></div>
+    <button class="next-button" id="next-btn">Next</button>
+    <button class="again" id="again">PLAY AGAIN</button>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
