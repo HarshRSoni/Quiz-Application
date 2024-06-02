@@ -5,7 +5,7 @@ let timer;
 const timePerQuestion = 10;
 let quizStarted = false;
 
-//event listener for  buttons
+//event listener for buttons
 document.getElementById('start-btn').addEventListener('click', () => {
     if (!quizStarted) {
         quizStarted = true;
@@ -19,7 +19,7 @@ document.getElementById('next-btn').addEventListener('click', () => {
     nextQuestion();
 });
 document.getElementById('again').addEventListener('click', () => {
-    window.location.href = 'intro.html.html'; // Replace 'first_page.html' with the URL of your first page
+    window.location.href = 'intro.html.html';
 });
 
 
@@ -62,16 +62,19 @@ function startQuiz() {
 
 function displayQuestion() {
     clearInterval(timer);
+
     if (currentQuestionIndex < questions.length) {
         const currentQuestion = questions[currentQuestionIndex];
         document.getElementById('question').textContent = currentQuestion.question;
         console.log('Displaying question:', currentQuestionIndex);
         document.getElementById('options').innerHTML = '';
+
         ['optionA', 'optionB', 'optionC', 'optionD'].forEach(optionKey => {
             if (currentQuestion[optionKey]) {
                 addOption(currentQuestion[optionKey], currentQuestion.answer === currentQuestion[optionKey]);
             }
         });
+
         startTimer();
     } else {
         console.log('End of Quiz');
@@ -139,14 +142,14 @@ function startTimer() {
 
     timer = setInterval(() => {
         timeLeft--;
-        timerElement.textContent = `Time left: ${formatTime(timeLeft)} sec`; // Update time display
+        timerElement.textContent = `Time left: ${ formatTime(timeLeft) } sec`; // Update time display
         if (timeLeft <= 0) {
             clearInterval(timer); // Stop the timer when time runs out
             handleAnswer(false); // Mark the answer as incorrect when time runs out
         }
-    }, 1000); // Update every second
+    }, 1000);
 }
 
 function formatTime(seconds) {
-    return seconds; // Simple formatting, can be enhanced if needed
+    return seconds;
 }
