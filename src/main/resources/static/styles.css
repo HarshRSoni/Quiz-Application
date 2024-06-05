@@ -394,17 +394,19 @@ path.two {
      align-items: center;
      padding: 1em;
      font-size: 2em;
-     border: none;
-     border-radius: 0.5em;
-     background: #FF9800; /* Orange button background */
+     background: #FF9800;
      color: black;
      cursor: pointer;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
      transition: background-color 0.3s, transform 0.3s;
      font-family: "Poppins", sans-serif;
+     border: 0.05em solid #ccc;
+     border-radius: 0.65em;
+
  }
 
  #difficulty-buttons button:hover {
-     background-color: #62CED2; /* Change button color on hover */
+     background-color: #62CED2; /
      transform: scale(1.025);
  }
 
@@ -448,7 +450,7 @@ path.two {
      border-radius: 0.65em;
      background-image:  #FFC57C;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     font-size: 2em;
+     font-size: 2em; align-items: flex-start;
  }
 
  .category-item button {
@@ -464,8 +466,6 @@ path.two {
      transition: background-color 0.3s, transform 0.3s;
      display: flex;
      justify-content: center;
-     align-items: center;
-     text-align: center;
      font-family: "Poppins", sans-serif;
  }
 
@@ -477,6 +477,7 @@ path.two {
  @media (max-width: 768px) {
      body {
          height: auto;
+
      }
 
      h1 {
