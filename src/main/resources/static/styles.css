@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
 body {
+    background: #CCCCCC;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
-    font-weight: BOLD;
-    background-color: white;
 }
 
 h1 {
@@ -64,6 +69,7 @@ h4 {
 
 .start-button:hover {
     background-color: #62CED2;
+
 }
 
 * {
@@ -201,3 +207,314 @@ path.two {
         margin-left: 15px;
     }
 }
+
+ .quiz-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 4em;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 15px;
+     max-width: 80%;
+     width: auto;
+     height: auto;
+     background: rgba(255, 255, 255, 0.2);
+ }
+
+ .options {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     gap: 10px;
+     margin: 20px 0;
+     width: 100%;
+ }
+
+ .option {
+     padding: 1em;
+     font-size: 1.5em;
+     border-radius: 0.25em;
+     background: #FFA453;
+     color: black;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s;
+     box-sizing: border-box;
+ }
+
+ .option:hover {
+     background-color: #62CED2;
+ }
+
+ .again,
+ .next-button {
+     margin-top:1em;
+     width: auto;
+     padding: 15px;
+     font-size: 1.5em;
+     font-weight: bold;
+     color: black;
+     background-color: #EB4559;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     display: none;
+     transition: background-color 0.3s ease;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .again:hover,
+ .next-button:hover {
+     background-color: #62CED2;
+ }
+
+ .timer {
+     margin: 2em;
+     font-size: 1em;
+ }
+
+ .score {
+     margin: 2em;
+     font-size: 1em;
+ }
+
+ #start-btn {
+     margin: 30px 15px 15px;
+     padding: 20px 60px;
+     font-size: 2em;
+     font-weight: bold;
+     color: #020000;
+     background-color: #FFC96F;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ #start-btn:hover {
+     background-color: #62CED2;
+     transform: scale(1.025);
+ }
+
+ .question {
+     font-weight: bold;
+     font-size: 1.67em;
+     margin-bottom: 20px;
+     text-align: center;
+ }
+
+ .feedback {
+     margin-bottom: 20px;
+     font-size: 1.25em;
+     text-align: center;
+ }
+
+ @media (max-width: 768px) {
+     body {
+         height: auto;
+         padding: 1em;
+     }
+
+     .quiz-container {
+         padding: 2em;
+         max-width: 100%;
+         width: auto;
+     }
+
+     .options {
+         gap: 0.5em;
+         margin: 10px 0;
+     }
+
+     .option {
+         padding: 0.75em;
+         font-size: 1.2em;
+     }
+
+     .again,
+     .next-button {
+         padding: 10px;
+         font-size: 1.2em;
+     }
+
+     .timer,
+     .score {
+         margin: 1em;
+         font-size: 0.9em;
+     }
+
+     #start-btn {
+         margin: 20px 10px 10px;
+         padding: 15px 50px;
+         font-size: 1.5em;
+     }
+
+     .question {
+         font-size: 1.2em;
+         margin-bottom: 15px;
+     }
+
+     .feedback {
+         font-size: 1em;
+         margin-bottom: 15px;
+     }
+ }
+
+
+
+ #container {
+     display: flex;
+     margin: 4em;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+
+ h1 {
+     margin-bottom: 1em;
+     color: #333;
+ }
+
+ #difficulty-buttons {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5em;
+     padding: 1.5em;
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 1em;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     width: 50vw;
+     max-width: 400px;
+ }
+
+ #difficulty-buttons button {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 1em;
+     font-size: 2em;
+     border: none;
+     border-radius: 0.5em;
+     background: #FF9800; /* Orange button background */
+     color: black;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s;
+     font-family: "Poppins", sans-serif;
+ }
+
+ #difficulty-buttons button:hover {
+     background-color: #62CED2; /* Change button color on hover */
+     transform: scale(1.025);
+ }
+
+
+
+ #container {
+     display: flex;
+     margin: 1em 0 1em;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+
+ h1 {
+     margin-top: 1em; /* Add margin to the top of the h1 */
+     margin-bottom: 1em;
+ }
+
+ #category-list {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1em;
+     padding: 1.5em;
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 1em;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     width: 60vw;
+     height: auto;
+     justify-content: center; /* centers the grid items horizontally */
+ }
+
+
+ .category-item {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     padding: 0.05em;
+     border: 0.1em solid #ccc;
+     border-radius: 0.65em;
+     background-image:  #FFC57C;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     font-size: 2em;
+ }
+
+ .category-item button {
+     width: 100%;
+     height: 100%;
+     padding: 1em;
+     font-size: 1em;
+     border: none;
+     border-radius: 0.5em;
+     background: #FFA453;
+     color: black;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     font-family: "Poppins", sans-serif;
+ }
+
+ .category-item button:hover {
+     background-color: #62CED2; /* Teal button background on hover */
+     transform: scale(1.025);
+ }
+
+ @media (max-width: 768px) {
+     body {
+         height: auto;
+     }
+
+     h1 {
+         font-size: 2em;
+
+     }
+
+     #category-list {
+         grid-template-columns: 2fr;
+         gap: 0.25em;
+         width: 80vw;
+     }
+
+     .category-item {
+         font-size: 1.5em;
+         padding: 0.5em;
+     }
+
+     .category-item button {
+         padding: 0.75em;
+         font-size: 0.9em;
+     }
+       #container {
+              margin: 2em;
+          }
+
+          h1 {
+              font-size: 2em;
+
+          }
+
+          #difficulty-buttons {
+              width: 90vw; /* Use more of the viewport width on mobile */
+              padding: 1em;
+          }
+
+          #difficulty-buttons button {
+              font-size: 1.5em; /* Adjust font size for mobile */
+              padding: 0.75em;
+          }
+ }

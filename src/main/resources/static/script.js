@@ -18,10 +18,10 @@ document.getElementById('next-btn').addEventListener('click', () => {
     console.log('Next button clicked');
     nextQuestion();
 });
-document.getElementById('again').addEventListener('click', () => {
-    window.location.href = 'intro.html.html';
-});
 
+document.getElementById('again').addEventListener('click', () => {
+    window.location.href = 'intro.html';
+});
 
 async function fetchQuizData() {
     const selectedCategoryId = localStorage.getItem('selectedCategoryId');
@@ -38,10 +38,12 @@ async function fetchQuizData() {
 
                 document.getElementById('start-btn').style.display = 'none';
                 startQuiz();
+
             } else {
                 console.error('No questions found in API response:', data);
                 alert('No questions found. Please try again later.');
             }
+
         } catch (error) {
             console.error('Error fetching quiz data:', error);
             alert('Error fetching quiz data. Please try again later.');
@@ -57,7 +59,9 @@ function startQuiz() {
     score = 0; // Reset score
     document.getElementById('score-value').textContent = score;
     document.getElementById('next-btn').style.display = 'none';
+
     displayQuestion();
+
 }
 
 function displayQuestion() {
@@ -76,6 +80,7 @@ function displayQuestion() {
         });
 
         startTimer();
+
     } else {
         console.log('End of Quiz');
         endQuiz();

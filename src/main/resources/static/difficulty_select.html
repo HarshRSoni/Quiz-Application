@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Difficulty</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" href="styles.css">
+
     <script>
         function selectDifficulty(difficulty) {
             localStorage.setItem('selectedDifficulty', difficulty);
@@ -12,95 +14,6 @@
         }
     </script>
 </head>
-<style>
-    body {
-    font-weight: BOLD;
-    background: #CCCCCC;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'POPPINS', sans-serif;
-}
-
-#container {
-    display: flex;
-    margin: 4em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 1em;
-    color: #333; /* Adjust color for better visibility */
-}
-
-#difficulty-buttons {
-    display: flex; /* Change to flex to make buttons vertical */
-    flex-direction: column; /* Align buttons vertically */
-    gap: 1.5em; /* Add gap between buttons */
-    padding: 1.5em;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background for the grid */
-    border-radius: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 50vw;
-    max-width: 400px; /* Limit maximum width */
-}
-
-#difficulty-buttons button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    font-size: 2em;
-    border: none;
-    border-radius: 0.5em;
-    background: #FF9800; /* Orange button background */
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    font-family: "Poppins", sans-serif;
-}
-
-#difficulty-buttons button:hover {
-    background-color: #62CED2; /* Change button color on hover */
-    transform: scale(1.025);
-}
-
-@media (max-width: 768px) {
-    body {
-        height: auto;
-        padding: 1em;
-    }
-
-    #container {
-        margin: 2em;
-    }
-
-    h1 {
-        font-size: 2em;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-    }
-
-    #difficulty-buttons {
-        width: 90vw; /* Use more of the viewport width on mobile */
-        padding: 1em;
-    }
-
-    #difficulty-buttons button {
-        font-size: 1.5em; /* Adjust font size for mobile */
-        padding: 0.75em;
-    }
-}
-
-
-</style>
 <body>
 <div id="container">
 <h1> Select Difficulty Level </h1>
