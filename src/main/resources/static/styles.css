@@ -225,9 +225,9 @@ path.two {
      display: flex;
      flex-direction: column;
      text-align: center;
-     gap: 10px;
+     gap: 12px;
      margin: 20px 0;
-     width: 100%;
+     width: 70%;
  }
 
  .option {
