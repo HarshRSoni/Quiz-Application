@@ -406,7 +406,7 @@ path.two {
  }
 
  #difficulty-buttons button:hover {
-     background-color: #62CED2; /
+     background-color: #62CED2;
      transform: scale(1.025);
  }
 
@@ -471,7 +471,7 @@ path.two {
 
  .category-item button:hover {
      background-color: #62CED2; /* Teal button background on hover */
-     transform: scale(1.025);
+     transform: scale(1.05);
  }
 
  @media (max-width: 768px) {
